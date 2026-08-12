@@ -1,28 +1,19 @@
 import pymysql
 import pytest
+from selenium.webdriver.chrome.service import Service
+from selenium import webdriver
 
 from config.config import *
+from utils.driver_utils import get_driver
 
 
-@pytest.fixture(scope="session",autouse=True)
-def destroy_data():
-    yield
-    sqls=[
-        SQL1,
-        SQL2
-    ]
-    conn = pymysql.Connect(
-        host=DB_HOST,
-        port=DB_PORT,
-        database=DB_NAME,
-        user=DB_USER,
-        password=DB_PASSWORD,
-        charset="utf8"
-    )
-    cur = conn.cursor()
-    # 执行语句
-    for sql in sqls:
-       cur.execute(sql)
-    cur.close()
-    conn.close()
+@pytest.fixture(scope="function")
+def driver_handler():
+
+    #创建浏览器对象
+    driver = get_driver()
+
+    yield driver
+
+    #关闭浏览器对象
 
