@@ -1,0 +1,17 @@
+2026-08-12 22:08:14 driver_utils.py  [函数:get_chrome_driver ] [line:37 ] INFO --启动chrome浏览器成功
+2026-08-12 22:08:14 test_runner.py   [函数:test_case         ] [line:31 ] INFO --用例ID:test_1 模块：test 场景：XX 标题：XXX
+2026-08-12 22:08:14 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第1步：打开网址-元素（None,None）-数据（file:///E:/%E6%B5%8B%E8%AF%95/pagetest/pagetest/%E6%B3%A8%E5%86%8CA.html）-索引(None)
+2026-08-12 22:08:14 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第1-1步：断言url-元素（None,None）-数据（pagetest）-索引(None)
+2026-08-12 22:08:14 assert_keywords.py [函数:assert_url        ] [line:16 ] INFO --✅️当前url:file:///E:/%E6%B5%8B%E8%AF%95/pagetest/pagetest/%E6%B3%A8%E5%86%8CA.html 包含 预期url:pagetest
+2026-08-12 22:08:14 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第2步：输入用户名-元素（xpath,//input）-数据（admin）-索引(None)
+2026-08-12 22:08:14 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第3步：等待-元素（None,None）-数据（5）-索引(None)
+2026-08-12 22:08:24 driver_utils.py  [函数:get_chrome_driver ] [line:37 ] INFO --启动chrome浏览器成功
+2026-08-12 22:08:24 test_runner.py   [函数:test_case         ] [line:31 ] INFO --用例ID:test_2 模块：test 场景：XX1 标题：XXX1
+2026-08-12 22:08:24 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第1步：打开网址-元素（None,None）-数据（file:///E:/%E6%B5%8B%E8%AF%95/pagetest/pagetest/%E6%B3%A8%E5%86%8CA.html）-索引(None)
+2026-08-12 22:08:24 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第2步：输入用户名-元素（xpath,//input）-数据（admin）-索引(None)
+2026-08-12 22:08:24 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第3步：输入密码-元素（xpath,//input[@id='passwordA']）-数据（123456）-索引(None)
+2026-08-12 22:08:25 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第4步：等待-元素（None,None）-数据（3）-索引(None)
+2026-08-12 22:08:28 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第5步：清空密码-元素（xpath,//input[@id='passwordA']）-数据（None）-索引(None)
+2026-08-12 22:08:28 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第6步：等待-元素（None,None）-数据（3）-索引(None)
+2026-08-12 22:08:31 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第7步：点击注册按钮-元素（xpath,//button）-数据（None）-索引(None)
+2026-08-12 22:08:31 keywords_utils.py [函数:wrapper           ] [line:12 ] INFO --第8步：等待-元素（None,None）-数据（3）-索引(None)

@@ -1,6 +1,9 @@
 import logging
 import pytest
 from jinja2 import Template
+
+from core import assert_keywords
+from core.assert_keywords import AssertKeywords
 from utils.allure_utils import allure_init
 from utils.excel_utils import read_excel
 
@@ -29,14 +32,19 @@ class TestRunner:
         #创建浏览器
         #创建关键字对象
         keywords=Keywords(driver_handler)
+        assert_keywords=AssertKeywords(driver_handler)
         #执行
         for step in case["steps"]:
 
             #记录步骤的描述信息日志
-            logging.info(f'步骤：{step} ')
             #匹配关键字：A.__getattribute__(属性名或方法名)-返回一个绑定方法对象类型的数据
-            func_name=keywords.__getattribute__(step["keyword"])
-            func_name(step)
+            for i in [keywords,assert_keywords]:
+                if hasattr(i,step["keyword"]):
+                    func_name = i.__getattribute__(step["keyword"])
+                    func_name(step)
+                    break
+            else:
+                raise AssertionError(f"❌️没有找到关键字：{step['keyword']}")
 
 
 
