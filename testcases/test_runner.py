@@ -36,7 +36,7 @@ class TestRunner:
             logging.info(f'步骤：{step} ')
             #匹配关键字：A.__getattribute__(属性名或方法名)-返回一个绑定方法对象类型的数据
             func_name=keywords.__getattribute__(step["keyword"])
-            func_name(step["by"],step["value"],step["data"])
+            func_name(step)
 
 
 

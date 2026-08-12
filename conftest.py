@@ -16,4 +16,5 @@ def driver_handler():
     yield driver
 
     #关闭浏览器对象
+    driver.quit()
 
