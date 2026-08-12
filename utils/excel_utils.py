@@ -2,7 +2,7 @@ import openpyxl
 
 from config.config import *
 
-def read_excel(file_path=EXCEL_FILE,sheet_name=SHEET_NAME):
+def read_excel(file_path=EXCEL_FILE):
     #打开excel文件
     workbook=openpyxl.load_workbook(file_path)
     #读数操作

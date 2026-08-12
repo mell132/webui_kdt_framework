@@ -11,7 +11,7 @@ EDGE_DRIVER_PATH = "./driver/edgedriver.exe"
 HEADLESS=False
 #excel测试用例地址
 EXCEL_FILE="./data/测试用例.xlsx"
-SHEET_NAME="Sheet1"
+
 # #mysql配置
 # DB_HOST="192.168.10.131"
 # DB_PORT=3306
