@@ -1,8 +1,8 @@
 INFO     root:driver_utils.py:37 启动chrome浏览器成功
 INFO     root:test_runner.py:28 用例ID:test_1 模块：test 场景：XX 标题：XXX
 INFO     root:test_runner.py:36 步骤：{'step_num': 1, 'step_name': '打开网址', 'keyword': 'open', 'by': None, 'value': None, 'data': 'file:///E:/%E6%B5%8B%E8%AF%95/pagetest/pagetest/%E6%B3%A8%E5%86%8CA.html', 'index': None} 
-INFO     root:keywords.py:16 第1步：打开网址
+INFO     root:keywords_utils.py:12 第1步：打开网址-元素（None,None）-数据（file:///E:/%E6%B5%8B%E8%AF%95/pagetest/pagetest/%E6%B3%A8%E5%86%8CA.html）-索引(None)
 INFO     root:test_runner.py:36 步骤：{'step_num': 2, 'step_name': '输入用户名', 'keyword': 'input', 'by': 'xpath', 'value': '//input', 'data': 'admin', 'index': None} 
-INFO     root:keywords.py:28 第2步：输入用户名
+INFO     root:keywords_utils.py:12 第2步：输入用户名-元素（xpath,//input）-数据（admin）-索引(None)
 INFO     root:test_runner.py:36 步骤：{'step_num': 3, 'step_name': '等待', 'keyword': 'wait', 'by': None, 'value': None, 'data': 5, 'index': None} 
-INFO     root:keywords.py:40 第3步：等待
+INFO     root:keywords_utils.py:12 第3步：等待-元素（None,None）-数据（5）-索引(None)

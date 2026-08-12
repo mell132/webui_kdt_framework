@@ -5,6 +5,10 @@ import time
 import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+from utils.keywords_utils import kw_step
+
+
 class Keywords:
 
     def __init__(self,driver):
@@ -19,36 +23,31 @@ class Keywords:
         else:
             return wait.until(EC.presence_of_element_located(locator))[step["index"]]
 
+    @kw_step
     def open(self,step):
         """打开网址"""
-        with allure.step(f'第{step["step_num"]}步：{step["step_name"]}'):
-            logging.info(f'第{step["step_num"]}步：{step["step_name"]}')
-            self.driver.get(step["data"])
+        self.driver.get(step["data"])
 
+    @kw_step
     def click(self, step):
         """点击"""
-        with allure.step(f'第{step["step_num"]}步：{step["step_name"]}'):
-            logging.info(f'第{step["step_num"]}步：{step["step_name"]}')
-            #self.driver.find_element(step["by"],step["value"]).click()
-            self.driver.find(step).click()
+        #self.driver.find_element(step["by"],step["value"]).click()
+        self.find(step).click()
 
+    @kw_step
     def input(self,step):
         """输入文本"""
-        with allure.step(f'第{step["step_num"]}步：{step["step_name"]}'):
-            logging.info(f'第{step["step_num"]}步：{step["step_name"]}')
-            self.driver.find(step).send_keys(step["data"])
-            #self.driver.find_element(step["by"],step["value"]).send_keys(step["data"])
+        self.find(step).send_keys(step["data"])
+        #self.driver.find_element(step["by"],step["value"]).send_keys(step["data"])
 
+    @kw_step
     def clear(self, step):
         """清空文本"""
-        with allure.step(f'第{step["step_num"]}步：{step["step_name"]}'):
-            logging.info(f'第{step["step_num"]}步：{step["step_name"]}')
-            #self.driver.find_element(step["by"],step["value"]).clear()
-            self.driver.find(step).clear()
+        #self.driver.find_element(step["by"],step["value"]).clear()
+        self.find(step).clear()
 
+    @kw_step
     def wait(self,step):
         """等待"""
-        with allure.step(f'第{step["step_num"]}步：{step["step_name"]}'):
-            logging.info(f'第{step["step_num"]}步：{step["step_name"]}')
-            time.sleep(step["data"])
+        time.sleep(step["data"])
 
