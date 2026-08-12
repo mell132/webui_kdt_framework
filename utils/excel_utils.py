@@ -24,10 +24,18 @@ def read_excel(file_path=EXCEL_FILE,sheet_name=SHEET_NAME):
                 #组织用例过程
                 current_case={
                     "id":dict_data["id"],
+                    "feature":dict_data["feature"],
+                    "story":dict_data["story"],
+                    "title":dict_data["title"],
                     "steps":[
                         {
                             "step_num":dict_data["step_num"],
-                            "step_name":dict_data["step_name"]
+                            "step_name":dict_data["step_name"],
+                            "keyword":dict_data["keyword"],
+                            "by":dict_data["by"],
+                            "value":dict_data["value"],
+                            "data":dict_data["data"],
+                            "index":dict_data["index"]
                         }
                     ],
                     "is_true":dict_data["is_true"],
@@ -40,8 +48,13 @@ def read_excel(file_path=EXCEL_FILE,sheet_name=SHEET_NAME):
                 current_case["steps"].append(
                     {
 
-                        "step_num": dict_data["step_num"],
-                        "step_name": dict_data["step_name"]
+                        "step_num":dict_data["step_num"],
+                        "step_name":dict_data["step_name"],
+                        "keyword":dict_data["keyword"],
+                        "by":dict_data["by"],
+                        "value":dict_data["value"],
+                        "data":dict_data["data"],
+                        "index":dict_data["index"]
 
                 })
     data=[case for case in all_cases if case["is_true"]]
@@ -51,4 +64,4 @@ def read_excel(file_path=EXCEL_FILE,sheet_name=SHEET_NAME):
     workbook.close()
     return data
 
-read_excel()
+# read_excel()
