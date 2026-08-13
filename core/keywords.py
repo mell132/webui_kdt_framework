@@ -56,4 +56,14 @@ class Keywords:
         time.sleep(step["data"])
 
 
+    @kw_step
+    def shot(self,step):
+        """截图"""
+        #获取时间
+        now_time=time.strftime("%Y-%m-%d %H:%M:%S")
 
+        png=self.driver.get_screenshot_as_png()
+        allure.attach(
+            png,
+            f'第{step["step_num"]}步_{now_time}.png',
+            attachment_type=allure.attachment_type.PNG,)
