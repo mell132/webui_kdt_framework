@@ -1,3 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","5514","ID:test_1 --------XXX","testcases","Wed Aug 12 22:08:14 CST 2026","passed","Wed Aug 12 22:08:19 CST 2026","TestRunner","test_runner","",""
-"","9694","ID:test_2 --------XXX1","testcases","Wed Aug 12 22:08:24 CST 2026","passed","Wed Aug 12 22:08:34 CST 2026","TestRunner","test_runner","",""
+"","9774","ID:test_2 --------XXX1","testcases","Thu Aug 13 18:57:16 CST 2026","passed","Thu Aug 13 18:57:26 CST 2026","TestRunner","test_runner","",""
+"","5584","ID:test_1 --------XXX","testcases","Thu Aug 13 18:57:06 CST 2026","passed","Thu Aug 13 18:57:12 CST 2026","TestRunner","test_runner","",""
