@@ -16,7 +16,7 @@ class TestRunner:
 
     # #提取后的数据需要初始化一个全局的属性来保存，可以使用{}空字典
     # all={}
-
+    """@pytest.mark.flaky(reruns=3,return_delay=3)--失败重试装饰器"""
     @pytest.mark.parametrize("case",data)
     def test_case(self,case,driver_handler):
 

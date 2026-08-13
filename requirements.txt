@@ -5,3 +5,9 @@ pytest
 openpyxl
 allure-pytest
 jinja2
+selenium
+webdriver-manager
+pymysql
+pytest-rerunfailures
+pytest-xdist
+pyautogui
